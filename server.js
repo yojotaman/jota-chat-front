@@ -7,17 +7,17 @@ app.use(express.static('public'));
 
 app.get('/', function (req, res){
 	// res.send('Hola mundo');
-	res.render('index');
+	res.render('index', {title: 'Portal SF'});
 })
 
 app.get('/signup', function (req, res){
 	// res.send('Hola mundo');
-	res.render('index');
+	res.render('index', {title: 'Portal SF - Signup'});
 })
 
 app.get('/signin', function (req, res){
 	// res.send('Hola mundo');
-	res.render('index');
+	res.render('index', {title: 'Portal SF - Signin'});
 })
 
 app.listen (3000, function (err){

@@ -1,4 +1,4 @@
-$secondary-color: #B8B6B8;
+$secondary-color: #363F58;
 
 @import"node_modules/materialize-css/sass/materialize.scss"; // contiene los estilos de materialize escritos en sass
 
@@ -6,7 +6,7 @@ body {
 	
 	background: #fafafa;
 	
-	color: #000000;
+	color: #363F58; // color de la fuente del cuerpo de la página
 	font-family: Montserrat;
 }
 
@@ -14,12 +14,14 @@ body {
 	margin: 30px auto;
 }
 .iphone {
-	max-width: 100%;
+	max-width: 120%;
+	margin-top: 30px;
 }
 
 .site-footer {
 	text-transform: uppercase;
 	font-size: 12px; 
+	margin-top: 20px;
 }
 
 .login-box,
@@ -29,11 +31,13 @@ body {
 	border-radius:3px;
 	padding: 10px 0;
 	text-align: center;
+	margin-top:20px; 
 }
 
-.signup-box .kinetigram {
+.kinetigram {
 	font-family: 'Oleo Script';
 	font-size: 42px;
+	color: $secondary-color;
 }
 
 .signup-form {
@@ -47,14 +51,23 @@ body {
 }
 
 .signup-form .btn.btn-fb{
-	background-color: #5F5F5F;
+	background-color: #EBB2B1;
 	font-size: .8em;
 }
 
+
+
 .signup-form .btn.btn-fb:hover{
-	/*background-color: #2d6599;*/
+	background-color: #E99391;
 }
 
+
 .signup-form .btn.btn-signup {
-	/*background-color: #125688;*/
+	background-color: #B5CBE0;
 }
+
+.header {
+	background-color: #EBB2B1;
+	color: black;
+}
+
