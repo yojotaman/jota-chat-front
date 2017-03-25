@@ -6426,11 +6426,14 @@ body {
   color: #363F58;
   font-family: Montserrat; }
 
+.landing {
+  margin: 30px auto; }
+
 .main-container {
   margin: 30px auto; }
 
 .iphone {
-  max-width: 120%;
+  max-width: 100%;
   margin-top: 30px; }
 
 .site-footer {
@@ -6450,7 +6453,7 @@ body {
 .kinetigram {
   font-family: 'Oleo Script';
   font-size: 42px;
-  color: #363F58; }
+  color: #363F58 !important; }
 
 .signup-form {
   width: 65%;
@@ -6471,5 +6474,10 @@ body {
   background-color: #B5CBE0; }
 
 .header {
-  background-color: #EBB2B1;
-  color: black; }
+  background-color: white;
+  color: black;
+  box-shadow: none;
+  border-bottom: 1px solid #363F58; }
+
+.timeline {
+  padding: 30px 0; }
