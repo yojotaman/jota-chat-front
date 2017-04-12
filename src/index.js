@@ -1,11 +1,10 @@
 require('babel-polyfill')
 var page = require('page');
-
-
-require('./homepage');
-require('./signup');
-require('./signin');
-require('./footer');
+require('./homepage')
+require('./signup')
+require('./signin')
+require('./user-page')
+require('./footer')
 
 page(); //page.start
 
