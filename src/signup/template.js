@@ -18,7 +18,8 @@ var signupForm = yo`<div class="col s12 m7 ">
 											<input type="text" name="name" placeholder=${translate.message('fullname')}/>
 											<input type="text" name="username" placeholder=${translate.message('username')}/>
 											<input type="password" name="password" placeholder=${translate.message('password')}/>
-											<button class="btn waves-effect waves-light btn-signup" type="submit">Regístrate</button>
+											<button class="btn waves-effect waves-light btn-signup" type="submit">${translate.message('signup.call-to-action')}</button>
+											
 										</div>
 									</form>
 								</div>								

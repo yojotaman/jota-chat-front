@@ -6646,7 +6646,8 @@ body {
   max-width: 90%; }
 
 .modal .fa-heart {
-  display: inline-block; }
+  display: inline-block;
+  color: #f44336; }
 
 .like-heart {
   font-size: 10em;
@@ -6657,10 +6658,9 @@ body {
   color: white;
   transition: all .1s ease;
   opacity: 0; }
-
-.like-heart.liked {
-  color: red;
-  font-size: 12em;
-  display: block;
-  transition: all .5s ease;
-  opacity: 1; }
+  .like-heart.liked {
+    color: #f44336;
+    font-size: 12em;
+    display: block;
+    transition: all .5s ease;
+    opacity: 1; }

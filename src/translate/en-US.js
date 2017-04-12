@@ -3,7 +3,7 @@ module.exports = {
             '=0 {no likes}' +
             '=1 {# like}' +
             'other {# likes}}',    
-    'likes': '{likes, number} me gusta',
+    
     'logout': 'Logout',
     'english': 'English',
     'spanish': 'Spanish',

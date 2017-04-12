@@ -238,6 +238,7 @@ $avatar-size-big: 150px;
 
   .fa-heart {
     display: inline-block;
+    color: #f44336
   }
 }
 
@@ -250,14 +251,16 @@ $avatar-size-big: 150px;
   color: white;
   transition: all .1s ease;
   opacity: 0;
+
+    &.liked {
+    color: #f44336;
+    font-size: 12em;
+    display: block;
+    transition: all .5s ease;
+    opacity: 1;
+  }
 }
 
-.like-heart.liked {
-  color: red;
-  font-size: 12em;
-  display: block;
-  transition: all .5s ease;
-  opacity: 1;
-}
+
 
 
