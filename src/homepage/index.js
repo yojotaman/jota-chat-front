@@ -5,13 +5,78 @@ var title = require('title');
 var request = require('superagent');
 var header = require('../header'); // middelware
 var axios = require('axios');
-
+var Webcam = require('webcamjs');
+var picture = require('../picture-card')
 
 page('/', header, loading, asyncLoad, function(ctx, next){
     title('Portal SF')
     var main = document.getElementById('main-container');   
 
 	empty(main).appendChild(template(ctx.pictures));
+
+      const picturePreview = $('#picture-preview');
+      const camaraInput = $('#camara-input');
+      const cancelPicture = $('#cancelPicture');
+      const shootButton = $('#shoot');
+      const uploadButton = $('#uploadButton');
+
+      function reset()
+      {
+        picturePreview.addClass('hide');
+        cancelPicture.addClass('hide');
+        uploadButton.addClass('hide');
+        shootButton.removeClass('hide');
+        camaraInput.removeClass('hide');
+      }
+
+      cancelPicture.click(reset)
+
+    $( document ).ready(function() 
+  {
+      $('.modal').modal({ // inicializa todos los modales
+        ready: function()
+        {
+          Webcam.attach('#camara-input');
+          shootButton.click((ev) => {
+            Webcam.snap((data_uri) => {
+              picturePreview.html (`<img src="${data_uri}"/>`);
+              picturePreview.removeClass('hide');
+              cancelPicture.removeClass('hide');
+              uploadButton.removeClass('hide');
+              shootButton.addClass('hide');
+              camaraInput.addClass('hide');
+              uploadButton.off('click');
+              uploadButton.click(() => {
+                const pic = {
+                  url: data_uri,
+                  likes: 0,
+                  liked: false,
+                  createAt: +new Date(),
+                  user: {
+                    username: 'mariac',
+                    avatar: 'http://www.stockvault.net/data/2014/06/19/158950/preview16.jpg'
+                    }
+                }
+                $('#picture-cards').prepend(picture(pic));
+                reset();
+                $('#modalCamara').modal('close');
+              })
+            });
+          })
+        },
+        complete: function(){
+          Webcam.reset();
+          reset();
+        }
+      }); 
+      
+      $('#modal-trigger').on('click', function() // abrir el modal click
+      {  
+        $('#modalCamara').modal('open'); // el #href debe ser el mismo id del modal. 
+      });
+      
+    });
+
 })
 
 function loading (ctx, next) {

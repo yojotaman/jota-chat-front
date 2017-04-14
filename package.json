@@ -21,6 +21,7 @@
     "pug": "^2.0.0-beta6",
     "superagent": "^3.5.2",
     "title": "^1.0.0",
+    "webcamjs": "^1.0.22",
     "yo-yo": "^1.3.2"
   },
   "devDependencies": {
